@@ -46,7 +46,7 @@ namespace WpfClientCurrency
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Currency source = cmbSource.SelectedItem as Currency;
-            Currency target = cmbTarget.SelectedItem as Currency;
+            Currency target = cmbTarget.SelectedItem as Currency; 
             double amount = double.Parse(tbAmount.Text);
             double result = currencyService.Convert(source, target, amount);
             tbResult.Text = $"{amount} {source.Key} is {result} {target.Key}";
